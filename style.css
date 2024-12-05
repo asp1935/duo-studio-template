@@ -1,0 +1,529 @@
+@font-face {
+    font-family: mori;
+    src: url(./assets/ppmori.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+    font-family: mori;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    mix-blend-mode: difference;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor {
+    padding: 0.7vw;
+    border-radius: 50%;
+    position: fixed;
+    background-color: #edbfff;
+    z-index: 8;
+    transition: background-image ease 0.5s;
+    background-position: center;
+    background-size: cover;
+    mix-blend-mode: difference;
+}
+
+#purple {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+    background-color: #EDBFFF;
+    opacity: 0;
+    display: none;
+    position: relative;
+}
+
+#purple .moving {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    white-space: nowrap;
+}
+
+#purple .slider {
+    display: inline-block;
+    white-space: nowrap;
+    animation: slide 4s linear infinite;
+
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+#purple .slider p {
+    display: inline-block;
+    padding: 1vw;
+    font-size: 5vw;
+}
+
+.main {
+    background-color: #0f0d0d;
+
+}
+
+#nav {
+    width: 100%;
+    height: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2.5vw 1.5vw;
+    position: fixed;
+    mix-blend-mode: difference;
+    z-index: 999;
+
+}
+
+#nav img {
+    height: 1.5vw;
+    cursor: pointer;
+}
+
+#nav .nav-part2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+#nav .nav-part2 h4 {
+    text-transform: uppercase;
+    font-size: 0.9vw;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+#nav .nav-part2 h4:nth-child(1) {
+    border-bottom: 1px solid #fff;
+}
+
+#nav .circle {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+#page1 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    z-index: 9;
+    padding: 12vw 0 0 6vw;
+}
+
+#page1 .title-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+#page1 h1 {
+    font-size: 8vw;
+    font-weight: 300;
+
+    letter-spacing: -1px;
+    width: fit-content;
+}
+
+#page1 h2 {
+    font-size: 8vw;
+    font-weight: 300;
+    margin-left: 22vw;
+    letter-spacing: -1px;
+    width: fit-content;
+}
+
+#page1 .video-container {
+    width: 60%;
+    margin-top: 6vw;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#page1 .video-container .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: transparent;
+}
+
+#page1 video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#page2 {
+    width: 100%;
+    min-height: 90vh;
+    padding: 8vw 5vw 0 4vw;
+    border-bottom: 2px solid #2f2f2f;
+    position: relative;
+    z-index: 9;
+}
+
+#page2 h2 {
+    font-size: 6vw;
+    font-weight: 400;
+    color: #000;
+    line-height: 4vw;
+
+}
+
+.page2-container {
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 6vw 0;
+}
+
+.page2-container .page2-left {
+    width: 37%;
+}
+
+.page2-container .page2-right {
+    width: 23%;
+}
+
+.page2-left h3 {
+    font-size: 3.6vw;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.page2-right p {
+    color: #000;
+    font-size: 1.4vw;
+
+}
+
+.page2-right button {
+    width: 100%;
+    border-radius: 30px;
+    padding: 8px 0;
+    text-transform: uppercase;
+    color: #000;
+    border: none;
+    background-color: #edbfff;
+    margin-top: 1.5vw;
+}
+
+
+#page3 {
+    min-height: 90vh;
+    width: 100%;
+    position: relative;
+    padding: 8vw 5vw 0 4vw;
+    z-index: 9;
+    border-bottom: 2px solid #2f2f2f;
+
+}
+
+#page3 h1 {
+    font-size: 6vw;
+    font-weight: 300;
+    color: #000;
+    margin-left: 5vw;
+}
+
+.page3-part1,
+.page3-part2,
+.page3-part3 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.page3-part1 img {
+    width: 40vw;
+    margin-top: 10vw;
+}
+
+.page3-part1 video {
+    width: 35vw;
+}
+
+.page3-part2 video {
+    width: 40vw;
+    margin-top: 10vw;
+}
+
+.page3-part2 img {
+    width: 35vw;
+}
+
+.page3-part3 {
+    margin: 5vw 5vw 3vw 5vw;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+.page3-part3 h1 {
+    font-size: 6vw;
+    font-size: 6vw;
+    font-weight: 300;
+    color: #000;
+}
+
+.page3-part3 .discover-container {
+    width: 15vw;
+    height: 15vw;
+    position: relative;
+}
+
+.page3-part3 p {
+    width: 10vw;
+    height: 10vw;
+    text-align: center;
+    place-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    color: #000;
+    background-color: #EDBEFB;
+    border-radius: 50%;
+}
+
+
+#page4 {
+    min-height: 110vh;
+    width: 100%;
+    position: relative;
+    z-index: 9;
+    padding: 0vw 5vw 0vw 0w;
+    border-bottom: 2px solid #525252;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#page4 .elem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.elem img {
+    position: absolute;
+    opacity: 0;
+    transition: all ease-out 0.5s;
+    transform: translateY(10%) rotate(2deg);
+
+}
+
+.elem img:nth-child(1) {
+    left: 2%;
+    width: 25vw;
+}
+
+.elem img:nth-child(3) {
+    right: 3%;
+    width: 22vw;
+    height: 28vw;
+}
+
+.elem .text-div {
+    height: 8vw;
+    overflow: hidden;
+}
+
+.elem .text-div h1 {
+    font-size: 7.5vw;
+    transition: all ease-out 0.5s;
+    font-weight: 500;
+
+}
+
+.elem:hover h1 {
+    transform: translateY(-100%);
+    color: #EDBFFF;
+}
+
+.elem:hover img {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+
+}
+
+#page5 {
+    min-height: 100vh;
+    width: 100%;
+    border-bottom: 2px solid #525252;
+    padding: 8vw 6vw 0vw 6vw;
+}
+
+#page5 .top-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+#page5 .top-heading h2 {
+    font-size: 4vw;
+    font-weight: 500;
+    padding-bottom: 1vw;
+}
+
+.box {
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 0.5vw;
+    border-top: 2px solid white;
+    border-collapse: collapse;
+
+}
+
+.box:nth-last-child(1) {
+    border-bottom: 2px solid white;
+}
+
+.box .sub-box {
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
+
+footer {
+    width: 100%;
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 100;
+    letter-spacing: 2px;
+}
+
+@media screen and (max-width:768px) {
+    #cursor {
+        display: none;
+    }
+
+    #nav {
+        padding: 25px 10px;
+    }
+
+    #nav img {
+        width: 5.5vw;
+        height: 5.5vw;
+    }
+
+    #nav .nav-part2 h4 {
+        font-size: 3vw;
+    }
+
+    #page1 {
+        padding: 12vw 0 0 0;
+    }
+
+    #page2 h2 {
+        font-size: 10vw;
+    }
+
+    .page2-container {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .page2-container .page2-left {
+        width: 100%;
+    }
+
+    .page2-container .page2-right {
+        width: 100%;
+        margin-top: 5vw;
+        text-align: justify;
+    }
+
+    .page2-left h3 {
+        font-size: 5vw;
+    }
+
+    .page2-right p {
+        font-size: 4vw;
+    }
+
+    .page2-right button {
+        margin-top: 5vw;
+    }
+
+    #page3 h1 {
+        font-size: 8vw;
+    }
+
+    .page3-part3 h1 {
+        font-size: 4.5vw !important;
+    }
+
+    .page3-part3 .discover-container {
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .page3-part3 p {
+        width: 15vw;
+        height: 15vw;
+        font-size: 2.5vw;
+    }
+
+    #page4 {
+        padding: 0 5vw 0vw 0;
+        align-content: center;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+    #cursor {
+        display: none;
+    }
+
+    #nav .nav-part2 h4 {
+        font-size: 2vw;
+    }
+}
