@@ -1,6 +1,6 @@
-# Due Studio Template
+# Duo Studio Template
 
-A modern and interactive **Due Studio Template** built using **HTML**, **CSS**, and **JavaScript**. This template incorporates cutting-edge JavaScript libraries like **GSAP** * to provide a smooth, visually engaging user experience.
+A modern and interactive **Duo Studio Template** built using **HTML**, **CSS**, and **JavaScript**. This template incorporates cutting-edge JavaScript libraries like **GSAP** * to provide a smooth, visually engaging user experience.
 
 ---
 
@@ -28,4 +28,4 @@ Follow these steps to set up the project locally:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/asp1935/due-studio-template.git
+   git clone https://github.com/asp1935/duo-studio-template.git
