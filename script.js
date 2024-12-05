@@ -89,9 +89,9 @@ function handleResponsiveAnimation() {
             scrollTrigger: {
                 trigger: '#page1 h1',
                 scroller: '.main',
-                // markers: true,
+                markers: true,
                 start: 'top 40%',
-                end: 'top -10%',
+                end: 'top 20%',
                 scrub: 2
             }
         })
